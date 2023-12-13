@@ -29,22 +29,19 @@ public class WordController {
             menu();
             int action = scanner.nextInt();
             switch (action) {
-                case 1:
-                    addWord();
+                case 1: addWord();
                     break;
-                case 2:
-                    wordList();
+                case 2: wordList();
                     break;
-                case 3:
+                case 3:multipleChoice();
                     break;
-                case 4:
+                case 4:spelling();
                     break;
-                case 5:
-                    searching();
+                case 5: searching();
                     break;
                 case 6:deleteWordById();
                     break;
-                case 0:
+                case 0:t=false;
                     break;
                 default:
                     System.err.println("Invalid action");
@@ -81,5 +78,11 @@ public class WordController {
         System.out.println("Enter id");
         int id=scanner.nextInt();
         wordService.deletewordById(id);
+    }
+    public void multipleChoice(){
+        wordService.multipleChoice();
+    }
+    public void spelling(){
+        wordService.spelling();
     }
 }
