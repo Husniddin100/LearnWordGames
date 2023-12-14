@@ -68,16 +68,16 @@ public class WordService {
     public void multipleChoice() {
     }
 
-    public void spelling(){
-        Scanner scanner=new Scanner(System.in);
+    public void spelling() {
+        Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         List<Word> words = wordRepository.wordList();
         for (Word word : words) {
-            for (int i =0; i < random.nextInt(); i++) {
+            for (int i = 0; i < random.nextInt(); i++) {
                 System.out.println(word.getTranslate());
                 System.out.println("Enter translate");
-                String s=scanner.next();
-                if (word.getWord().equals(s)){
+                String s = scanner.next();
+                if (word.getWord().equals(s)) {
                     System.out.println("True");
                     return;
                 }

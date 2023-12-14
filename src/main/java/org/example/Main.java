@@ -14,5 +14,7 @@ public class Main {
 
         WordController wordController = (WordController) applicationContext.getBean("wordController");
         wordController.start();
+
+        
     }
 }
